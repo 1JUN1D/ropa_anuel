@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merchandise Exclusivo Anuel AA - Solo Fans Reales</title>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    
+    fbq('init', 'TU_PIXEL_ID_AQUI'); // Reemplazar con tu Pixel ID
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=TU_PIXEL_ID_AQUI&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0000 50%, #000000 100%);
+            color: #ffffff;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Efecto de humo constante */
+        .smoke-effect {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.3;
+        }
+
+        .smoke {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(255,0,0,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: smokeFloat 8s infinite linear;
+        }
+
+        .smoke:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .smoke:nth-child(2) { left: 30%; animation-delay: 2s; }
+        .smoke:nth-child(3) { left: 50%; animation-delay: 4s; }
+        .smoke:nth-child(4) { left: 70%; animation-delay: 6s; }
+        .smoke:nth-child(5) { left: 90%; animation-delay: 1s; }
+
+        @keyframes smokeFloat {
+            0% {
+                transform: translateY(100vh) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.3;
+            }
+            90% {
+                opacity: 0.1;
+            }
+            100% {
+                transform: translateY(-100px) scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Header con espacio para logo */
+        .header {
+            text-align: center;
+            padding: 40px 0 20px;
+            border-bottom: 2px solid #ff0000;
+            margin-bottom: 40px;
+        }
+
+        .logo-space {
+            width: 200px;
+            height: 80px;
+            background: rgba(255, 0, 0, 0.1);
+            border: 2px dashed #ff0000;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+
+        .logo-placeholder {
+            width: 200px;
+            height: auto;
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .main-title {
+            font-size: 3.5em;
+            font-weight: bold;
+            color: #ff0000;
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            color: #ffffff;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        /* Sección de urgencia */
+        .urgency-section {
+            background: linear-gradient(45deg, #ff0000, #8b0000);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 50px;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 30px rgba(255, 0, 0, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(255, 0, 0, 0.6); }
+            100% { box-shadow: 0 0 30px rgba(255, 0, 0, 0.3); }
+        }
+
+        .urgency-title {
+            font-size: 2.5em;
+            color: #ffffff;
+            margin-bottom: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .urgency-text {
+            font-size: 1.3em;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        /* Filtros */
+        .filters-section {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            border: 1px solid #ff0000;
+        }
+
+        .filters-title {
+            font-size: 1.8em;
+            color: #ff0000;
+            text-align: center;
+            margin-bottom: 25px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .filter-btn {
+            padding: 12px 25px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            border: 2px solid rgba(255, 0, 0, 0.5);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: linear-gradient(45deg, #ff0000, #8b0000);
+            border-color: #ff0000;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+        }
+
+        /* Contador de productos */
+        .product-counter {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 1.2em;
+            color: #ff0000;
+            font-weight: bold;
+        }
+
+        /* Grid de productos */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .product-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .product-item.hidden {
+            display: none;
+        }
+
+        .product-item:hover {
+            transform: translateY(-10px);
+            border-color: #ff0000;
+            box-shadow: 0 15px 30px rgba(255, 0, 0, 0.3);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 220px;
+            background: rgba(255, 0, 0, 0.1);
+            border: 2px dashed #ff0000;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            color: #ff0000;
+            font-size: 12px;
+            text-align: center;
+            padding: 10px;
+            word-wrap: break-word;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .product-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .product-image::after {
+            content: "🔍 Ver en tamaño completo";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            color: #ff0000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .product-image:hover::after {
+            opacity: 1;
+        }
+
+        .product-title {
+            font-size: 1.3em;
+            color: #ffffff;
+            margin-bottom: 8px;
+            font-weight: bold;
+            line-height: 1.3;
+        }
+
+        .product-subtitle {
+            font-size: 0.9em;
+            color: #ff0000;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .product-description {
+            color: #cccccc;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        .interest-btn {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(45deg, #ff0000, #8b0000);
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .interest-btn:hover {
+            background: linear-gradient(45deg, #8b0000, #ff0000);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
+        }
+
+        /* Modal de waitlist */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, #1a1a1a, #000000);
+            margin: 5% auto;
+            padding: 40px;
+            border: 2px solid #ff0000;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-title {
+            font-size: 2em;
+            color: #ff0000;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-label {
+            display: block;
+            color: #ffffff;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ff0000;
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #ff0000;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(45deg, #ff0000, #8b0000);
+            color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.3em;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+
+        .close {
+            color: #ff0000;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: -20px;
+            margin-right: -20px;
+        }
+
+        .close:hover {
+            color: #ffffff;
+        }
+
+        /* Modal de imagen */
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 1500;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.95);
+            overflow: auto;
+        }
+
+        .image-modal-content {
+            display: block;
+            margin: 50px auto;
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 10px;
+            border: 2px solid #ff0000;
+            box-shadow: 0 0 50px rgba(255, 0, 0, 0.5);
+            animation: modalZoom 0.3s ease;
+        }
+
+        @keyframes modalZoom {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .image-close {
+            position: absolute;
+            top: 30px;
+            right: 50px;
+            color: #ff0000;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.8);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #ff0000;
+            transition: all 0.3s ease;
+        }
+
+        .image-close:hover {
+            background: #ff0000;
+            color: #ffffff;
+            transform: rotate(90deg);
+        }
+
+        .image-info {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 600px;
+            border: 1px solid #ff0000;
+        }
+
+        .image-info h3 {
+            color: #ff0000;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .image-info p {
+            color: #ffffff;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid #ff0000;
+            margin-top: 60px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5em;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .urgency-title {
+                font-size: 2em;
+            }
+
+            .filter-buttons {
+                justify-content: center;
+            }
+
+            .filter-btn {
+                font-size: 12px;
+                padding: 10px 20px;
+            }
+
+            .logo-placeholder {
+                width: 100px;
+            }
+
+            .image-close {
+                top: 20px;
+                right: 20px;
+                font-size: 30px;
+                width: 50px;
+                height: 50px;
+            }
+
+            .image-modal-content {
+                margin: 20px auto;
+                max-width: 95%;
+                max-height: 70%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .logo-placeholder {
+                width: 70px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Efecto de humo -->
+    <div class="smoke-effect">
+        <div class="smoke"></div>
+        <div class="smoke"></div>
+        <div class="smoke"></div>
+        <div class="smoke"></div>
+        <div class="smoke"></div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <img src="logo.png" alt="Logo Anuel AA" class="logo-placeholder">
+            <h1 class="main-title">Drop Exclusivo</h1>
+            <p class="subtitle">Solo para Fans Reales del Concierto</p>
+        </div>
+
+        <!-- Sección de urgencia -->
+        <div class="urgency-section">
+            <h2 class="urgency-title">🔥 SOLD OUT 🔥</h2>
+            <p class="urgency-text">Este drop se agotó más rápido de lo esperado...</p>
+            <div style="font-size: 1.8em; color: #ffff00; font-weight: bold; margin: 20px 0;">¡Únete a la lista de espera para el PRÓXIMO DROP!</div>
+            <p style="font-size: 1.1em; margin-top: 15px;">Los de la waitlist tienen acceso 24 horas antes que todos</p>
+        </div>
+
+        <!-- Filtros -->
+        <div class="filters-section">
+            <h3 class="filters-title">Encuentra Tu Estilo</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">VER TODOS</button>
+                <button class="filter-btn" data-filter="hoodies">HOODIES</button>
+                <button class="filter-btn" data-filter="oversized">OVERSIZED</button>
+                <button class="filter-btn" data-filter="tops">TOPS</button>
+            </div>
+        </div>
+
+        <!-- Contador de productos -->
+        <div class="product-counter">
+            <span id="productCount">31</span> DISEÑOS ÚNICOS DISPONIBLES
+        </div>
+
+<!-- Grid de todos los productos -->
+<div class="products-grid" id="productsGrid">
+    <!-- HOODIES -->
+    <div class="product-item" data-category="hoodies" data-product="hoodie_aa_negro_espalda">
+        <div class="product-image" onclick="openImageModal('modelos/Hoodie_AA_Negro_Espalda_Hombre.png', 'Hoodie AA Negro Espalda Hombre', 'HOODIE HOMBRE')">
+            <img src="modelos/Hoodie_AA_Negro_Espalda_Hombre.png" alt="Hoodie AA Negro Espalda Hombre" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="product-subtitle">HOODIE HOMBRE</div>
+        <h3 class="product-title">AA Negro Espalda</h3>
+        <p class="product-description">El diseño más icónico con el logo AA en la espalda. Solo los verdaderos fans entienden el significado.</p>
+        <button class="interest-btn" onclick="showInterest('hoodie_aa_negro_espalda', 'Hoodie AA Negro Espalda Hombre')">ME INTERESA</button>
+    </div>
+
+    <div class="product-item" data-category="hoodies" data-product="hoodie_poster1_negro">
+        <div class="product-image" onclick="openImageModal('modelos/Hoodie_Poster1_Negro_Espalda_Hombre.png', 'Hoodie Poster1 Negro Espalda Hombre', 'HOODIE HOMBRE')">
+            <img src="modelos/Hoodie_Poster1_Negro_Espalda_Hombre.png" alt="Hoodie Poster1 Negro Espalda Hombre" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="product-subtitle">HOODIE HOMBRE</div>
+        <h3 class="product-title">Poster 1 Tour Negro</h3>
+        <p class="product-description">Arte oficial del tour. Cada vez que te lo pongas, revivirás la energía del concierto.</p>
+        <button class="interest-btn" onclick="showInterest('hoodie_poster1_negro', 'Hoodie Poster1 Negro Hombre')">ME INTERESA</button>
+    </div>
+
+    <div class="product-item" data-category="hoodies" data-product="hoodie_poster2_negro">
+        <div class="product-image" onclick="openImageModal('modelos/Hoodie_Poster2_Negro_Espalda_Hombre.png', 'Hoodie Poster2 Negro Espalda Hombre', 'HOODIE HOMBRE')">
+            <img src="modelos/Hoodie_Poster2_Negro_Espalda_Hombre.png" alt="Hoodie Poster2 Negro Espalda Hombre" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="product-subtitle">HOODIE HOMBRE</div>
+        <h3 class="product-title">Poster 2 Tour Negro</h3>
+        <p class="product-description">Segundo diseño oficial del tour. Para los que coleccionan cada momento histórico.</p>
+        <button class="interest-btn" onclick="showInterest('hoodie_poster2_negro', 'Hoodie Poster2 Negro Hombre')">ME INTERESA</button>
+    </div>
+
+    <div class="product-item" data-category="hoodies" data-product="hoodie_poster3_negro">
+        <div class="product-image" onclick="openImageModal('modelos/Hoodie_Poster3_Negro_Espalda_Hombre.png', 'Hoodie Poster3 Negro Espalda Hombre', 'HOODIE HOMBRE')">
+            <img src="modelos/Hoodie_Poster3_Negro_Espalda_Hombre.png" alt="Hoodie Poster3 Negro Espalda Hombre" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="product-subtitle">HOODIE HOMBRE</div>
+        <h3 class="product-title">Poster 3 Tour Negro</h3>
+        <p class="product-description">Tercer arte exclusivo. Para los fans que no se conforman con lo básico.</p>
+        <button class="interest-btn" onclick="showInterest('hoodie_poster3_negro', 'Hoodie Poster3 Negro Hombre')">ME INTERESA</button>
+    </div>
+
+    <div class="product-item" data-category="hoodies" data-product="hoodie_poster4_negro">
+        <div class="product-image" onclick="openImageModal('modelos/Hoodie_Poster4_Negro_Espalda_Hombre.png', 'Hoodie Poster4 Negro Espalda Hombre', 'HOODIE HOMBRE')">
+            <img src="modelos/Hoodie_Poster4_Negro_Espalda_Hombre.png" alt="Hoodie Poster4 Negro Espalda Hombre" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="product-subtitle">HOODIE HOMBRE</div>
+        <h3 class="product-title">Poster 4 Tour Negro</h3>
+        <p class="product-description">Cuarto diseño de la colección tour. Cada poster cuenta una historia diferente.</p>
+        <button class="interest-btn" onclick="showInterest('hoodie_poster4_negro', 'Hoodie Poster4 Negro Hombre')">ME INTERESA</button>
+    </div>
+
+    <div class="product-item" data-category="hoodies" data-product="hoodie_poster5_negro">
+        <div class="product-image" onclick="openImageModal('modelos/Hoodie_Poster5_Negro_Espalda_Hombre.png', 'Hoodie Poster5 Negro Espalda Hombre', 'HOODIE HOMBRE')">
+            <img src="modelos/Hoodie_Poster5_Negro_Espalda_Hombre.png" alt="Hoodie Poster5 Negro Espalda Hombre" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="product-subtitle">HOODIE HOMBRE</div>
+        <h3 class="product-title">Poster 5 Tour Negro</h3>
+        <p class="product-description">Quinto arte de la serie. Para los verdaderos coleccionistas del momento.</p>
+        <button class="interest-btn" onclick="showInterest('hoodie_poster5_negro', 'Hoodie Poster5 Negro Hombre')">ME INTERESA</button>
+    </div>
+
+    <div class="product-item" data-category="hoodies" data-product="hoodie_poster6_blanco">
+        <div class="product-image" onclick="openImageModal('modelos/Hoodie_Poster6_Blanco_Espalda_Hombre.png', 'Hoodie Poster6 Blanco Espalda Hombre', 'HOODIE HOMBRE')">
+            <img src="modelos/Hoodie_Poster6_Blanco_Espalda_Hombre.png" alt="Hoodie Poster6 Blanco Espalda Hombre" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="product-subtitle">HOODIE HOMBRE</div>
+        <h3 class="product-title">Poster 6 Blanco Limited</h3>
+        <p class="product-description">Edición limitada en blanco. Para los que se atreven a destacar entre la multitud.</p>
+        <button class="interest-btn" onclick="showInterest('hoodie_poster6_blanco', 'Hoodie Poster6 Blanco Hombre')">ME INTERESA</button>
+    </div>
+
+    <div class="product-item" data-category="hoodies" data-product="hoodie_poster7_negro">
+        <div class="product-image" onclick="openImageModal('modelos/Hoodie_Poster7_Negro_Espalda_Hombre.png', 'Hoodie Poster7 Negro Espalda Hombre', 'HOODIE HOMBRE')">
+            <img src="modelos/Hoodie_Poster7_Negro_Espalda_Hombre.png" alt="Hoodie Poster7 Negro Espalda Hombre" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="product-subtitle">HOODIE HOMBRE</div>
+        <h3 class="product-title">Poster 7 Tour Negro</h3>
+        <p class="product-description">Séptimo diseño de la colección. El arte que define una era del reggaeton.</p>
+        <button class="interest-btn" onclick="showInterest('hoodie_poster7_negro', 'Hoodie Poster7 Negro Hombre')">ME INTERESA</button>
+    </div>
+
+    <div class="product-item" data-category="hoodies" data-product="hoodie_poster8_negro">
+        <div class="product-image" onclick="openImageModal('modelos/Hoodie_Poster8_Negro_Espalda_Hombre.png', 'Hoodie Poster8 Negro Espalda Hombre', 'HOODIE HOMBRE')">
+            <img src="modelos/Hoodie_Poster8_Negro_Espalda_Hombre.png" alt="Hoodie Poster8 Negro Espalda Hombre" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="product-subtitle">HOODIE HOMBRE</div>
+        <h3 class="product-title">Poster 8 Tour Negro</h3>
+        <p class="product-description">Último diseño de la serie hoodies. Para cerrar la colección con el mejor arte.</p>
+        <button class="interest-btn" onclick="showInterest('hoodie_poster8_negro', 'Hoodie Poster8 Negro Hombre')">ME INTERESA</button>
+    </div>
+
+    <!-- OVERSIZED COLLECTION -->
+    <div class="product-item" data-category="oversized" data-product="oversize_aa_negro_espalda_mujer">
+        <div class="product-image" onclick="openImageModal('modelos/Oversize_AA_Negro_Espalda_Mujer.png', 'Oversize AA Negro Espalda Mujer', 'OVERSIZED MUJER')">
+            <img src="modelos/Oversize_AA_Negro_Espalda_Mujer.png" alt="Oversize AA Negro Espalda Mujer" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="product-subtitle">OVERSIZED MUJER</div>
+        <h3 class="product-title">AA Negro Espalda</h3>
+        <p class="product-description">Corte oversized con el logo AA en la espalda. Comodidad y estilo que grita Anuel desde lejos.</p>
+        <button class="interest-btn" onclick="showInterest('oversize_aa_negro_espalda_mujer', 'Oversized AA Negro Espalda Mujer')">ME INTERESA</button>
+    </div>
+
+    <div class="product-item" data-category="oversized" data-product="oversize_aa_negro_mujer">
+        <div class="product-image" onclick="openImageModal('modelos/Oversize_AA_Negro_Mujer.png', 'Oversize AA Negro Mujer', 'OVERSIZED MUJER')">
+            <img src="modelos/Oversize_AA_Negro_Mujer.png" alt="Oversize AA Negro Mujer" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="product-subtitle">OVERSIZED MUJER</div>
+        <h3 class="product-title">AA Negro Frontal</h3>
+        <p class="product-description">Versión frontal del diseño AA. Oversized perfecto para ella, que combina con todo.</p>
+        <button class="interest-btn" onclick="showInterest('oversize_aa_negro_mujer', 'Oversized AA Negro Mujer')">ME INTERESA</button>
+    </div>
+
+    <div class="product-item" data-category="oversized" data-product="oversize_corazon_blanco_espalda_mujer">
+        <div class="product-image" onclick="openImageModal('modelos/Oversize_Corazon_Blanco_Espalda_Mujer.png', 'Oversize Corazon Blanco Espalda Mujer', 'OVERSIZED MUJER')">
+            <img src="modelos/Oversize_Corazon_Blanco_Espalda_Mujer.png" alt="Oversize Corazon Blanco Espalda Mujer" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="product-subtitle">OVERSIZED MUJER</div>
+        <h3 class="product-title">Corazón Blanco Espalda</h3>
+        <p class="product-description">El corazón que late al ritmo del reggaeton en blanco puro. Diseño espalda con significado profundo.</p>
+        <button class="interest-btn" onclick="showInterest('oversize_corazon_blanco_espalda_mujer', 'Oversized Corazón Blanco Espalda Mujer')">ME INTERESA</button>
+    </div>
+
+    <div class="product-item" data-category="oversized" data-product="oversize_corazon_blanco_mujer">
+        <div class="product-image" onclick="openImageModal('modelos/Oversize_Corazon_Blanco_Mujer.png', 'Oversize Corazon Blanco Mujer', 'OVERSIZED MUJER')">
+            <img src="modelos/Oversize_Corazon_Blanco_Mujer.png" alt="Oversize Corazon Blanco Mujer" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="product-subtitle">OVERSIZED MUJER</div>
+        <h3 class="product-title">Corazón Blanco Frontal</h3>
+        <p class="product-description">Corazón blanco frontal. Para las que llevan la pasión por la música en el pecho.</p>
+        <button class="interest-btn" onclick="showInterest('oversize_corazon_blanco_mujer', 'Oversized Corazón Blanco Mujer')">ME INTERESA</button>
+    </div>
+
+    <div class="product-item" data-category="oversized" data-product="oversize_corazon_negro_espalda_mujer">
+        <div class="product-image" onclick="openImageModal('modelos/Oversize_Corazon_Negro_Espalda_Mujer.png', 'Oversize Corazon Negro Espalda Mujer', 'OVERSIZED MUJER')">
+            <img src="modelos/Oversize_Corazon_Negro_Espalda_Mujer.png" alt="Oversize Corazon Negro Espalda Mujer" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="product-subtitle">OVERSIZED MUJER</div>
+        <h3 class="product-title">Corazón Negro Espalda</h3>
+        <p class="product-description">Negro intenso como la música de Anuel. El corazón que habla desde la espalda.</p>
+        <button class="interest-btn" onclick="showInterest('oversize_corazon_negro_espalda_mujer', 'Oversized Corazón Negro Espalda Mujer')">ME INTERESA</button>
+    </div>
+
+    <div class="product-item" data-category="oversized" data-product="oversize_corazon_negro_mujer">
+        <div class="product-image" onclick="openImageModal('modelos/Oversize_Corazon_Negro_Mujer.png', 'Oversize Corazon Negro Mujer', 'OVERSIZED MUJER')">
+            <img src="modelos/Oversize_Corazon_Negro_Mujer.png" alt="Oversize Corazon Negro Mujer" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="product-subtitle">OVERSIZED MUJER</div>
+        <h3 class="product-title">Corazón Negro Frontal</h3>
+        <p class="product-description">Corazón negro frontal que combina con todo y dice todo sin palabras.</p>
+        <button class="interest-btn" onclick="showInterest('oversize_corazon_negro_mujer', 'Oversized Corazón Negro Mujer')">ME INTERESA</button>
+    </div>
+
+    <div class="product-item" data-category="oversized" data-product="oversize_poster1_negro_espalda_hombre">
+        <div class="product-image" onclick="openImageModal('modelos/Oversize_Poster1_Negro_Espalda_Hombre.png', 'Oversize Poster1 Negro Espalda Hombre', 'OVERSIZED HOMBRE')">
+            <img src="modelos/Oversize_Poster1_Negro_Espalda_Hombre.png" alt="Oversize Poster1 Negro Espalda Hombre" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="product-subtitle">OVERSIZED HOMBRE</div>
+        <h3 class="product-title">Poster 1 Negro Espalda</h3>
+        <p class="product-description">Para él. El oversized que habla por sí solo con el arte del concierto más esperado.</p>
+        <button class="interest-btn" onclick="showInterest('oversize_poster1_negro_espalda_hombre', 'Oversized Poster1 Negro Espalda Hombre')">ME INTERESA</button>
+    </div>
+
+    <div class="product-item" data-category="oversized" data-product="oversize_poster1_negro_espalda_mujer">
+        <div class="product-image" onclick="openImageModal('modelos/Oversize_Poster1_Negro_Espalda_Mujer.png', 'Oversize Poster1 Negro Espalda Mujer', 'OVERSIZED MUJER')">
+            <img src="modelos/Oversize_Poster1_Negro_Espalda_Mujer.png" alt="Oversize Poster1 Negro Espalda Mujer" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="product-subtitle">OVERSIZED MUJER</div>
+        <h3 class="product-title">Poster 1 Negro Espalda</h3>
+        <p class="product-description">Versión femenina del poster 1. Oversized que representa la fuerza del reggaeton.</p>
+        <button class="interest-btn" onclick="showInterest('oversize_poster1_negro_espalda_mujer', 'Oversized Poster1 Negro Espalda Mujer')">ME INTERESA</button>
+    </div>
+
+    <div class="product-item" data-category="oversized" data-product="oversize_poster2_negro_espalda_hombre">
+        <div class="product-image" onclick="openImageModal('modelos/Oversize_Poster2_Negro_Espalda_Hombre.png', 'Oversize Poster2 Negro Espalda Hombre', 'OVERSIZED HOMBRE')">
+            <img src="modelos/Oversize_Poster2_Negro_Espalda_Hombre.png" alt="Oversize Poster2 Negro Espalda Hombre" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="product-subtitle">OVERSIZED HOMBRE</div>
+        <h3 class="product-title">Poster 2 Negro Espalda</h3>
+        <p class="product-description">Segundo arte del tour en oversized masculino. Para los que no se conforman con lo básico.</p>
+        <button class="interest-btn" onclick="showInterest('oversize_poster2_negro_espalda_hombre', 'Oversized Poster2 Negro Espalda Hombre')">ME INTERESA</button>
+    </div>
+
+    <div class="product-item" data-category="oversized" data-product="oversize_poster3_negro_espalda_hombre">
+        <div class="product-image" onclick="openImageModal('modelos/Oversize_Poster3_Negro_Espalda_Hombre.png', 'Oversize Poster3 Negro Espalda Hombre', 'OVERSIZED HOMBRE')">
+            <img src="modelos/Oversize_Poster3_Negro_Espalda_Hombre.png" alt="Oversize Poster3 Negro Espalda Hombre" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="product-subtitle">OVERSIZED HOMBRE</div>
+        <h3 class="product-title">Poster 3 Negro Espalda</h3>
+        <p class="product-description">Tercer arte oficial del tour en formato oversized. Para los verdaderos coleccionistas.</p>
+        <button class="interest-btn" onclick="showInterest('oversize_poster3_negro_espalda_hombre', 'Oversized Poster3 Negro Espalda Hombre')">ME INTERESA</button>
+    </div>
+
+    <div class="product-item" data-category="oversized" data-product="oversize_poster3_negro_espalda_mujer">
+        <div class="product-image" onclick="openImageModal('modelos/Oversize_Poster3_Negro_Espalda_Mujer.png', 'Oversize Poster3 Negro Espalda Mujer', 'OVERSIZED MUJER')">
+            <img src="modelos/Oversize_Poster3_Negro_Espalda_Mujer.png" alt="Oversize Poster3 Negro Espalda Mujer" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="product-subtitle">OVERSIZED MUJER</div>
+        <h3 class="product-title">Poster 3 Negro Espalda</h3>
+        <p class="product-description">Poster 3 en versión femenina oversized. El arte que define una generación.</p>
+        <button class="interest-btn" onclick="showInterest('oversize_poster3_negro_espalda_mujer', 'Oversized Poster3 Negro Espalda Mujer')">ME INTERESA</button>
+    </div>
+
+    <div class="product-item" data-category="oversized" data-product="oversize_poster4_negro_espalda_hombre">
+        <div class="product-image" onclick="openImageModal('modelos/Oversize_Poster4_Negro_Espalda_Hombre.png', 'Oversize Poster4 Negro Espalda Hombre', 'OVERSIZED HOMBRE')">
+            <img src="modelos/Oversize_Poster4_Negro_Espalda_Hombre.png" alt="Oversize Poster4 Negro Espalda Hombre" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="product-subtitle">OVERSIZED HOMBRE</div>
+        <h3 class="product-title">Poster 4 Negro Espalda</h3>
+        <p class="product-description">Cuarto diseño del tour en oversized. Para los que entienden el arte del reggaeton.</p>
+        <button class="interest-btn" onclick="showInterest('oversize_poster4_negro_espalda_hombre', 'Oversized Poster4 Negro Espalda Hombre')">ME INTERESA</button>
+    </div>
+
+    <div class="product-item" data-category="oversized" data-product="oversize_poster4_negro_espalda_mujer">
+        <div class="product-image" onclick="openImageModal('modelos/Oversize_Poster4_Negro_Espalda_Mujer.png', 'Oversize Poster4 Negro Espalda Mujer', 'OVERSIZED MUJER')">
+            <img src="modelos/Oversize_Poster4_Negro_Espalda_Mujer.png" alt="Oversize Poster4 Negro Espalda Mujer" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="product-subtitle">OVERSIZED MUJER</div>
+        <h3 class="product-title">Poster 4 Negro Espalda</h3>
+        <p class="product-description">Poster 4 versión femenina. Oversized que combina comodidad con actitud.</p>
+        <button class="interest-btn" onclick="showInterest('oversize_poster4_negro_espalda_mujer', 'Oversized Poster4 Negro Espalda Mujer')">ME INTERESA</button>
+    </div>
+
+    <div class="product-item" data-category="oversized" data-product="oversize_poster5_negro_espalda_hombre">
+        <div class="product-image" onclick="openImageModal('modelos/Oversize_Poster5_Negro_Espalda_Hombre.png', 'Oversize Poster5 Negro Espalda Hombre', 'OVERSIZED HOMBRE')">
+            <img src="modelos/Oversize_Poster5_Negro_Espalda_Hombre.png" alt="Oversize Poster5 Negro Espalda Hombre" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="product-subtitle">OVERSIZED HOMBRE</div>
+        <h3 class="product-title">Poster 5 Negro Espalda</h3>
+        <p class="product-description">Quinto arte de la serie en oversized masculino. Para los que viven cada letra de sus canciones.</p>
+        <button class="interest-btn" onclick="showInterest('oversize_poster5_negro_espalda_hombre', 'Oversized Poster5 Negro Espalda Hombre')">ME INTERESA</button>
+    </div>
+
+    <div class="product-item" data-category="oversized" data-product="oversize_poster5_negro_espalda_mujer">
+        <div class="product-image" onclick="openImageModal('modelos/Oversize_Poster5_Negro_Espalda_Mujer.png', 'Oversize Poster5 Negro Espalda Mujer', 'OVERSIZED MUJER')">
+            <img src="modelos/Oversize_Poster5_Negro_Espalda_Mujer.png" alt="Oversize Poster5 Negro Espalda Mujer" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="product-subtitle">OVERSIZED MUJER</div>
+        <h3 class="product-title">Poster 5 Negro Espalda</h3>
+        <p class="product-description">Poster 5 femenino. El oversized que representa la rebeldía con estilo.</p>
+        <button class="interest-btn" onclick="showInterest('oversize_poster5_negro_espalda_mujer', 'Oversized Poster5 Negro Espalda Mujer')">ME INTERESA</button>
+    </div>
+
+    <div class="product-item" data-category="oversized" data-product="oversize_poster6_blanco_espalda_hombre">
+        <div class="product-image" onclick="openImageModal('modelos/Oversize_Poster6_Blanco_Espalda_Hombre.png', 'Oversize Poster6 Blanco Espalda Hombre', 'OVERSIZED HOMBRE')">
+            <img src="modelos/Oversize_Poster6_Blanco_Espalda_Hombre.png" alt="Oversize Poster6 Blanco Espalda Hombre" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="product-subtitle">OVERSIZED HOMBRE</div>
+        <h3 class="product-title">Poster 6 Blanco Limited</h3>
+        <p class="product-description">Edición limitada en blanco. Oversized para los que se atreven a brillar.</p>
+        <button class="interest-btn" onclick="showInterest('oversize_poster6_blanco_espalda_hombre', 'Oversized Poster6 Blanco Espalda Hombre')">ME INTERESA</button>
+    </div>
+
+    <div class="product-item" data-category="oversized" data-product="oversize_rhlm2_rojo_negro_mujer">
+        <div class="product-image" onclick="openImageModal('modelos/Oversize_RHLM2Rojo_Negro_Mujer.png', 'Oversize RHLM2 Rojo Negro Mujer', 'OVERSIZED MUJER')">
+            <img src="modelos/Oversize_RHLM2Rojo_Negro_Mujer.png" alt="Oversize RHLM2 Rojo Negro Mujer" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="product-subtitle">OVERSIZED MUJER</div>
+        <h3 class="product-title">RHLM2 Rojo Negro</h3>
+        <p class="product-description">Diseño exclusivo RHLM2 en rojo y negro. Para las bebecitas que entienden el código.</p>
+        <button class="interest-btn" onclick="showInterest('oversize_rhlm2_rojo_negro_mujer', 'Oversized RHLM2 Rojo Negro Mujer')">ME INTERESA</button>
+    </div>
+
+    <div class="product-item" data-category="oversized" data-product="oversize_rhlm2_negro_mujer">
+        <div class="product-image" onclick="openImageModal('modelos/Oversize_RHLM2_Negro_Mujer.png', 'Oversize RHLM2 Negro Mujer', 'OVERSIZED MUJER')">
+            <img src="modelos/Oversize_RHLM2_Negro_Mujer.png" alt="Oversize RHLM2 Negro Mujer" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="product-subtitle">OVERSIZED MUJER</div>
+        <h3 class="product-title">RHLM2 Negro</h3>
+        <p class="product-description">RHLM2 en negro total. El oversized que habla el lenguaje de la calle.</p>
+        <button class="interest-btn" onclick="showInterest('oversize_rhlm2_negro_mujer', 'Oversized RHLM2 Negro Mujer')">ME INTERESA</button>
+    </div>
+
+    <!-- TOPS FEMENINOS -->
+    <div class="product-item" data-category="tops" data-product="top_aa_negro_mujer">
+        <div class="product-image" onclick="openImageModal('modelos/Top_AA_Negro_Mujer.png', 'Top AA Negro Mujer', 'TOP MUJER')">
+            <img src="modelos/Top_AA_Negro_Mujer.png" alt="Top AA Negro Mujer" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="product-subtitle">TOP MUJER</div>
+        <h3 class="product-title">AA Negro</h3>
+        <p class="product-description">El top que todas las bebecitas del concierto querían tener. Ahora es tu oportunidad.</p>
+        <button class="interest-btn" onclick="showInterest('top_aa_negro_mujer', 'Top AA Negro Mujer')">ME INTERESA</button>
+    </div>
+
+    <div class="product-item" data-category="tops" data-product="top_corazon_blanco_mujer">
+        <div class="product-image" onclick="openImageModal('modelos/Top_Corazon_Blanco_Mujer.png', 'Top Corazon Blanco Mujer', 'TOP MUJER')">
+            <img src="modelos/Top_Corazon_Blanco_Mujer.png" alt="Top Corazon Blanco Mujer" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="product-subtitle">TOP MUJER</div>
+        <h3 class="product-title">Corazón Blanco</h3>
+        <p class="product-description">Blanco puro con el corazón que representa la pasión por la música. Para las que sienten de verdad.</p>
+        <button class="interest-btn" onclick="showInterest('top_corazon_blanco_mujer', 'Top Corazón Blanco Mujer')">ME INTERESA</button>
+    </div>
+
+    <div class="product-item" data-category="tops" data-product="top_corazon_negro_mujer">
+        <div class="product-image" onclick="openImageModal('modelos/Top_Corazon_Negro_Mujer.png', 'Top Corazon Negro Mujer', 'TOP MUJER')">
+            <img src="modelos/Top_Corazon_Negro_Mujer.png" alt="Top Corazon Negro Mujer" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="product-subtitle">TOP MUJER</div>
+        <h3 class="product-title">Corazón Negro</h3>
+        <p class="product-description">Negro intenso como la música de Anuel. El top que combina con todo y dice todo.</p>
+        <button class="interest-btn" onclick="showInterest('top_corazon_negro_mujer', 'Top Corazón Negro Mujer')">ME INTERESA</button>
+    </div>
+</div>
+    </div>
+
+    <!-- Modal de imagen -->
+    <div id="imageModal" class="image-modal">
+        <button class="image-close" onclick="closeImageModal()">&times;</button>
+        <img class="image-modal-content" id="modalImage">
+        <div class="image-info">
+            <h3 id="modalTitle"></h3>
+            <p id="modalCategory"></p>
+        </div>
+    </div>
+
+    <!-- Modal de Waitlist -->
+    <div id="waitlistModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 class="modal-title">Lista de Espera VIP</h2>
+            <p style="margin-bottom: 30px; color: #cccccc;">Sé el primero en conseguir <span id="selectedProduct" style="color: #ff0000;"></span></p>
+            
+        <form id="waitlistForm" action="https://formspree.io/f/xyzpoqvw" method="POST">
+                <!-- Campos ocultos para información del producto -->
+                <input type="hidden" name="producto_id" id="hiddenProductId">
+                <input type="hidden" name="producto_nombre" id="hiddenProductName">
+                <input type="hidden" name="categoria" id="hiddenCategory">
+                <input type="hidden" name="tipo_diseño" id="hiddenDesignType">
+                <input type="hidden" name="color" id="hiddenColor">
+                <input type="hidden" name="genero" id="hiddenGender">
+                <input type="hidden" name="fecha_registro" id="hiddenTimestamp">
+                
+                <div class="form-group">
+                    <label class="form-label">Nombre Completo</label>
+                    <input type="text" class="form-input" name="nombre_completo" id="userName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">WhatsApp</label>
+                    <input type="tel" class="form-input" name="whatsapp" id="userPhone" required placeholder="+57 300 123 4567">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" name="email" id="userEmail" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Talla Preferida</label>
+                    <select class="form-input" name="talla_preferida" id="userSize" required>
+                        <option value="">Seleccionar talla</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="submit-btn">UNIRME A LA WAITLIST</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2025 - Merchandise Exclusivo Anuel AA | Solo para fans reales 🔥</p>
+    </div>
+
+    <script>
+        let currentProduct = '';
+        let currentProductName = '';
+
+        // Función para mostrar interés
+        function showInterest(productId, productName) {
+            currentProduct = productId;
+            currentProductName = productName;
+            document.getElementById('selectedProduct').textContent = productName;
+            document.getElementById('waitlistModal').style.display = 'block';
+            
+            // Track evento de interés
+            if (typeof fbq === 'function') {
+                fbq('trackCustom', 'ProductInterest', {
+                    product_id: productId,
+                    product_name: productName,
+                    category: getProductCategory(productId),
+                    design_type: getDesignType(productId),
+                    color: getProductColor(productId),
+                    gender: getProductGender(productId),
+                    timestamp: new Date().getTime()
+                });
+            }
+        }
+
+        // Función para cerrar modal de waitlist
+        function closeModal() {
+            document.getElementById('waitlistModal').style.display = 'none';
+        }
+
+        // NUEVAS FUNCIONES PARA EL MODAL DE IMAGEN
+        function openImageModal(imageSrc, title, category) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalCategory = document.getElementById('modalCategory');
+            
+            modal.style.display = 'block';
+            modalImg.src = imageSrc;
+            modalTitle.textContent = title;
+            modalCategory.textContent = category;
+            
+            // Prevenir scroll del body cuando el modal está abierto
+            document.body.style.overflow = 'hidden';
+            
+            // Track evento de vista de imagen
+            if (typeof fbq === 'function') {
+                fbq('trackCustom', 'ImageView', {
+                    image_title: title,
+                    category: category,
+                    timestamp: new Date().getTime()
+                });
+            }
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+            // Restaurar scroll del body
+            document.body.style.overflow = 'auto';
+        }
+
+        // Función para obtener categoría del producto
+        function getProductCategory(productId) {
+            if (productId.includes('hoodie')) return 'Hoodies';
+            if (productId.includes('oversize')) return 'Oversized';
+            if (productId.includes('top')) return 'Tops';
+            return 'Other';
+        }
+
+        // Función para obtener tipo de diseño
+        function getDesignType(productId) {
+            if (productId.includes('aa')) return 'AA';
+            if (productId.includes('poster')) return 'Poster';
+            if (productId.includes('corazon')) return 'Corazón';
+            if (productId.includes('rhlm2')) return 'RHLM2';
+            return 'Other';
+        }
+
+        // Función para obtener color
+        function getProductColor(productId) {
+            if (productId.includes('blanco')) return 'Blanco';
+            if (productId.includes('negro')) return 'Negro';
+            if (productId.includes('rojo')) return 'Rojo';
+            return 'Other';
+        }
+
+        // Función para obtener género
+        function getProductGender(productId) {
+            if (productId.includes('mujer')) return 'Mujer';
+            if (productId.includes('hombre')) return 'Hombre';
+            return 'Unisex';
+        }
+
+        // Sistema de filtros
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const productItems = document.querySelectorAll('.product-item');
+        const productCounter = document.getElementById('productCount');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remover active de todos los botones
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Agregar active al botón clickeado
+                button.classList.add('active');
+
+                const filter = button.getAttribute('data-filter');
+                let visibleCount = 0;
+
+                productItems.forEach(item => {
+                    if (filter === 'all') {
+                        item.classList.remove('hidden');
+                        visibleCount++;
+                    } else {
+                        if (item.getAttribute('data-category') === filter) {
+                            item.classList.remove('hidden');
+                            visibleCount++;
+                        } else {
+                            item.classList.add('hidden');
+                        }
+                    }
+                });
+
+                // Actualizar contador
+                productCounter.textContent = visibleCount;
+
+                // Track evento de filtro
+                if (typeof fbq === 'function') {
+                    fbq('trackCustom', 'FilterUsed', {
+                        filter_type: filter,
+                        visible_products: visibleCount,
+                        timestamp: new Date().getTime()
+                    });
+                }
+            });
+        });
+
+        // Manejar envío del formulario
+        document.getElementById('waitlistForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                product_id: currentProduct,
+                product_name: currentProductName,
+                product_category: getProductCategory(currentProduct),
+                design_type: getDesignType(currentProduct),
+                color: getProductColor(currentProduct),
+                gender: getProductGender(currentProduct),
+                name: document.getElementById('userName').value,
+                phone: document.getElementById('userPhone').value,
+                email: document.getElementById('userEmail').value,
+                size: document.getElementById('userSize').value,
+                timestamp: new Date().getTime()
+            };
+            
+            // Track evento de registro en waitlist
+            if (typeof fbq === 'function') {
+                fbq('trackCustom', 'WaitlistSignup', formData);
+                fbq('track', 'Lead', {
+                    content_name: currentProductName,
+                    content_category: getProductCategory(currentProduct),
+                    value: 1
+                });
+            }
+            
+            // Aquí enviarías los datos a tu servidor
+            console.log('Datos del formulario:', formData);
+            
+            // Mostrar confirmación
+            alert(`¡Listo! Te avisaremos cuando "${currentProductName}" esté disponible. Revisa tu WhatsApp en las próximas 24 horas.`);
+            
+            // Cerrar modal y limpiar formulario
+            closeModal();
+            document.getElementById('waitlistForm').reset();
+        });
+
+        // Cerrar modales al hacer clic fuera de ellos
+        window.onclick = function(event) {
+            const waitlistModal = document.getElementById('waitlistModal');
+            const imageModal = document.getElementById('imageModal');
+            
+            if (event.target == waitlistModal) {
+                closeModal();
+            }
+            if (event.target == imageModal) {
+                closeImageModal();
+            }
+        }
+
+        // Cerrar modal de imagen con tecla ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeImageModal();
+                closeModal();
+            }
+        });
+
+        // Track page engagement
+        let startTime = Date.now();
+        let maxScroll = 0;
+
+        window.addEventListener('scroll', function() {
+            const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+            maxScroll = Math.max(maxScroll, scrollPercent);
+        });
+
+        window.addEventListener('beforeunload', function() {
+            const timeOnPage = (Date.now() - startTime) / 1000;
+            if (typeof fbq === 'function') {
+                fbq('trackCustom', 'PageEngagement', {
+                    time_on_page: timeOnPage,
+                    max_scroll_percent: maxScroll,
+                    timestamp: new Date().getTime()
+                });
+            }
+        });
+
+        // Track productos más vistos
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -20% 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const productId = entry.target.getAttribute('data-product');
+                    if (productId && typeof fbq === 'function') {
+                        fbq('trackCustom', 'ProductView', {
+                            product_id: productId,
+                            category: getProductCategory(productId),
+                            design_type: getDesignType(productId),
+                            color: getProductColor(productId),
+                            gender: getProductGender(productId),
+                            timestamp: new Date().getTime()
+                        });
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observar todos los productos
+        document.querySelectorAll('.product-item').forEach(product => {
+            observer.observe(product);
+        });
+    </script>
+
+</body>
+</html>
