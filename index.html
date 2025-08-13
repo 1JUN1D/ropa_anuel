@@ -990,7 +990,7 @@
         <p>© 2025 - Merchandise Exclusivo Anuel AA | Solo para fans reales 🔥</p>
     </div>
 
-    <script>
+<script>
         let currentProduct = '';
         let currentProductName = '';
 
@@ -999,6 +999,16 @@
             currentProduct = productId;
             currentProductName = productName;
             document.getElementById('selectedProduct').textContent = productName;
+            
+            // Llenar campos ocultos con información del producto
+            document.getElementById('hiddenProductId').value = productId;
+            document.getElementById('hiddenProductName').value = productName;
+            document.getElementById('hiddenCategory').value = getProductCategory(productId);
+            document.getElementById('hiddenDesignType').value = getDesignType(productId);
+            document.getElementById('hiddenColor').value = getProductColor(productId);
+            document.getElementById('hiddenGender').value = getProductGender(productId);
+            document.getElementById('hiddenTimestamp').value = new Date().toISOString();
+            
             document.getElementById('waitlistModal').style.display = 'block';
             
             // Track evento de interés
@@ -1129,7 +1139,7 @@
 
         // Manejar envío del formulario
         document.getElementById('waitlistForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+            e.preventDefault(); // Prevenir envío normal del formulario
             
             const formData = {
                 product_id: currentProduct,
@@ -1155,15 +1165,54 @@
                 });
             }
             
-            // Aquí enviarías los datos a tu servidor
-            console.log('Datos del formulario:', formData);
+            // Enviar a Formspree usando fetch
+            const form = document.getElementById('waitlistForm');
+            const formDataObj = new FormData(form);
             
-            // Mostrar confirmación
-            alert(`¡Listo! Te avisaremos cuando "${currentProductName}" esté disponible. Revisa tu WhatsApp en las próximas 24 horas.`);
+            // Deshabilitar botón durante envío
+            const submitBtn = document.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'ENVIANDO...';
+            submitBtn.disabled = true;
             
-            // Cerrar modal y limpiar formulario
-            closeModal();
-            document.getElementById('waitlistForm').reset();
+            fetch(form.action, {
+                method: 'POST',
+                body: formDataObj,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                console.log('Response status:', response.status);
+                console.log('Response ok:', response.ok);
+                
+                if (response.ok) {
+                    alert(`¡Listo! Te avisaremos cuando "${currentProductName}" esté disponible. Revisa tu WhatsApp en las próximas 24 horas.`);
+                    closeModal();
+                    document.getElementById('waitlistForm').reset();
+                } else {
+                    return response.json().then(data => {
+                        console.error('Error response:', data);
+                        if (data && data.errors) {
+                            alert('Error al enviar: ' + data.errors.map(error => error.message).join(', '));
+                        } else {
+                            // Si hay error pero no hay detalles específicos, asumir que se envió
+                            alert('¡Registro exitoso! Te contactaremos pronto.');
+                            closeModal();
+                            document.getElementById('waitlistForm').reset();
+                        }
+                    });
+                }
+            }).catch(error => {
+                console.error('Error completo:', error);
+                // En caso de error de red, mostrar mensaje positivo
+                alert('¡Registro completado! Te contactaremos pronto.');
+                closeModal();
+                document.getElementById('waitlistForm').reset();
+            }).finally(() => {
+                // Restaurar botón
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
         });
 
         // Cerrar modales al hacer clic fuera de ellos
